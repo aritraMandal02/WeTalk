@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/drawable-v24/facebook.xml" value="0.2484375" />
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/drawable-v24/facebook_logo_2019.xml" value="0.2484375" />
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/drawable/facebook.xml" value="0.2484375" />
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/drawable/ic_facebook.xml" value="0.12916666666666668" />
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/layout/activity_main.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/layout/activity_sign_in.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/Aritra Mandal/StudioProjects/WeTalk/app/src/main/res/layout/activity_sign_up.xml" value="0.19429347826086957" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
