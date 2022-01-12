@@ -19,6 +19,7 @@ import java.util.Objects;
 
 public class SignInActivity extends AppCompatActivity {
 
+    private long backPressedTime;
     ActivitySignInBinding binding;
     ProgressDialog progressDialog;
     FirebaseAuth auth;
@@ -70,5 +71,15 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backPressedTime + 1500 > System.currentTimeMillis()){
+            finishAffinity();
+        }else{
+            Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }
