@@ -44,27 +44,31 @@ public class SignUpActivity extends AppCompatActivity {
         binding.signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog.show();
-                auth.createUserWithEmailAndPassword(binding.email.getText().toString(),
-                        binding.password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        if(task.isSuccessful()){
-                            Users user = new Users(binding.userName.getText().toString(),
-                                    binding.email.getText().toString(), binding.password.getText().toString());
+                if(binding.email.getText().toString().isEmpty() || binding.password.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Please Enter Email and Password", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    progressDialog.show();
+                    auth.createUserWithEmailAndPassword(binding.email.getText().toString(),
+                            binding.password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressDialog.dismiss();
+                            if (task.isSuccessful()) {
+                                Users user = new Users(binding.userName.getText().toString(),
+                                        binding.email.getText().toString(), binding.password.getText().toString());
 
-                            String id = task.getResult().getUser().getUid();
-                            database.getReference().child("Users").child(id).setValue(user);
-                            Toast.makeText(getApplicationContext(), "Account created successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-                            startActivity(intent);
+                                String id = task.getResult().getUser().getUid();
+                                database.getReference().child("Users").child(id).setValue(user);
+                                Toast.makeText(getApplicationContext(), "Account created successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(getApplicationContext(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
-                        else{
-                            Toast.makeText(getApplicationContext(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                    });
+                }
             }
         });
 

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "855693849890",
+    "firebase_url": "https://wetalk-f9486-default-rtdb.firebaseio.com",
     "project_id": "wetalk-f9486",
     "storage_bucket": "wetalk-f9486.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "855693849890-likmr5aqouubd3e2q9p8ao0khkbgrf4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wetalk",
+            "certificate_hash": "19061e56158f8d84c764da686499a1af16113a85"
+          }
+        },
         {
           "client_id": "855693849890-lfdoh0mt5c6s73kujqq51vgd60b7nkb3.apps.googleusercontent.com",
           "client_type": 3
