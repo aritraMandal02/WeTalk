@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#F4FAF9"
     android:orientation="vertical"
     tools:context=".SignInActivity">
 
@@ -13,16 +14,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:elevation="2dp"
         android:gravity="center_horizontal"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <EditText
             android:id="@+id/email_signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
-            android:hint="E-Mail"
+            android:hint="  E-Mail"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -30,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
+            android:hint="  Password"
             android:inputType="textPassword" />
 
         <TextView
@@ -38,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:text="Click for Sign Up" />
+            android:text="Click for Sign Up  " />
 
         <Button
             android:id="@+id/sign_in"
@@ -85,10 +89,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Sign In with Phone"
-            android:textSize="18sp"
             android:layout_marginTop="10dp"
-            android:textColor="@color/purple_500"/>
+            android:layout_marginBottom="5dp"
+            android:text="Sign In with Phone"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </LinearLayout>
